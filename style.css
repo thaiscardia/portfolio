@@ -24,8 +24,11 @@ html, body, figure, img, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, li
     --cor-fundo-destaque: #051821;
     --cor-de-background: #FAF6F5;
     --cor-de-detalhe: #0C4969;
+    --cor-background-dark: #010C11;
+    --cor-destaque-dark: #C8C6C4;
     --font-family-padrao: 'Montserrat', sans-serif;
 }
+
 
 .coluna {
     flex-basis: 49%;
@@ -49,7 +52,7 @@ header {
 }
 
 header .container{
-    background-color: var(--cor-de-background);
+    background-color: var(--cor-de-detalhe);
 }
 
 header .line{
@@ -68,6 +71,7 @@ header .right-column{
 header .right-column .label{
     margin: 20px;
 }
+
 header .coluna img{
     max-width: 100%;
 }
@@ -75,7 +79,7 @@ header .coluna img{
 header .coluna h1{
     font-family: 'Great Vibes', cursive;
     font-size: 60px;
-    color: var(--cor-de-detalhe);
+    color: var(--cor-de-background);
     text-align: center;
 }
 
@@ -83,7 +87,7 @@ header .coluna p{
     font-size: 20px;
     font-family: var(--font-family-padrao);
     text-align: center;
-    color: var(--cor-fundo-destaque);
+    color: var(--cor-de-background);
 }
 
 /* PÁGINA INICIAL */
@@ -182,12 +186,6 @@ footer nav .social-media li a:hover img{
     height: 50px;
 }
 
-.dark-act:checked ~ .dark-mode{
-    --cor-de-detalhe: #0C4969;
-    --cor-de-background: #010c11;
-    --cor-fundo-destaque: #c8c6c4;
-}
-
 header .container{
     position: relative;
 }
@@ -198,7 +196,7 @@ label{
     right: 30px;
     width: 52px;
     height: 30px;
-    background-color: var(--cor-de-detalhe);
+    background-color: var(--cor-de-background);
     border-radius: 35%;
     padding: 5px 5px;
     box-sizing: border-box;
@@ -209,62 +207,85 @@ label span{
     width: 20px;
     height: 20px;
     display: block;
-    background-color: var(--cor-de-background);
+    background-color: var(--cor-de-detalhe);
     border-radius: 100%;
 }
+
 .dark-act:checked ~ .dark-act label{
-    background-color: var(--cor-de-background);
+    background-color: var(--cor-destaque-dark);
 }
 
 .dark-act:checked ~ .dark-act label span{
-    background-color: var(--cor-de-detalhe);
+    background-color: var(--cor-background-dark);
     margin-left: 21px;
     transform: translateX(21px);
     transition: all ease .3s;
 }
 
+.dark-act:checked ~ .dark-mode{
+    --cor-detalhe-dark: #0e577e;
+    --cor-background-dark: #010C11;
+    --cor-destaque-dark: #C8C6C4;
+}
+
+.dark-act:checked ~ .dark-mode label span{
+    background-color: var(--cor-background-dark);
+    margin-left: 21px;
+}
 .dark-act:checked ~ .dark-mode .container{
-    background-color: var(--cor-de-fundo-destaque);
+    background-color: var(--cor-background-dark);
 }
 
 .dark-act:checked ~ .dark-act coluna{
-    color: var(--cor-de-background);
+    color: var(--cor-background-dark);
 }
 
 .dark-act:checked ~ .dark-mode header{
-    background-color: var(--cor-de-background);
+    background-color: var(--cor-background-dark);
 }
 
 .dark-act:checked ~ .dark-mode header .container{
-    background-color: var(--cor-de-fundo-destaque);
+    background-color: var(--cor-background-dark);
 }
 
 .dark-act:checked ~ .dark-mode main{
-    background-color: var(--cor-de-background);
+    background-color: var(--cor-background-dark);
 }
 
 .dark-act:checked ~ .dark-mode main .coluna section h2{
-    background-color: var(--cor-de-background);
+    background-color: var(--cor-background-dark);
+}
+
+.dark-act:checked ~ .dark-mode main .coluna section p{
+    color: var(--cor-destaque-dark);
 }
 
 .dark-act:checked ~ .dark-mode main .coluna section ul{
-    background-color: var(--cor-de-background);
+    background-color: var(--cor-background-dark);
 }
 
 .dark-act:checked ~ .dark-mode main .coluna section ul li{
-    color: var(--cor-fundo-destaque);
+    color: var(--cor-destaque-dark);
 }
 
 .dark-act:checked ~ .dark-mode main .coluna section ul li a{
-    color: var(--cor-de-detalhe);
+    color: var(--cor-detalhe-dark);
+}
+
+.dark-act:checked ~ .dark-mode main .coluna section ul li strong{
+    color: var(--cor-detalhe-dark);
 }
 
 .dark-act:checked ~ .dark-mode main .coluna section ul a h3{
-    color: var(--cor-de-detalhe);
+    color: var(--cor-detalhe-dark);
+}
+
+.dark-act:checked ~ .dark-mode footer{
+    background-color: var(--cor-background-dark);
 }
 
 .dark-act:checked ~ .dark-mode footer .container{
-    background-color: var(--cor-de-background);
+    background-color: var(--cor-background-dark);
 }
 
 .dark-act:checked ~ .dark-mode footer nav .social-media{
@@ -273,7 +294,7 @@ label span{
     padding: 50px 0 0;
 }
 .dark-act:checked ~ .dark-mode footer nav .social-media li{
-    color: var(--cor-fundo-destaque);
+    color: var(--cor-destaque-dark);
 }
 
 
