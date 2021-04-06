@@ -29,7 +29,6 @@ html, body, figure, img, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, li
     --font-family-padrao: 'Montserrat', sans-serif;
 }
 
-
 .coluna {
     flex-basis: 49%;
 }
@@ -134,6 +133,23 @@ main .coluna section ul li strong{
     color: var(--cor-fundo-destaque);
 }
 
+main .container section row{
+    display: flex;
+}
+
+main .container section .col{
+    flex: 48%;
+}
+
+main .the-end{
+    display: flex;
+}
+
+main .the-end h2{
+    font-size: 1.3rem;
+    margin: 0 0 15px;
+    color: var(--cor-de-detalhe);
+}
 
 /* FOOTER */
 
